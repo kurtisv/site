@@ -1,0 +1,59 @@
+/* 🌟 Mise en page principale */
+.carPageContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  /* 🖼️ Section galerie */
+  .gallerySection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  /* 📋 Section des infos */
+  .detailsSection {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .carTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #e60000;
+  }
+  
+  .carDescription {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  /* 📌 Liste des specs */
+  .carSpecs {
+    list-style: none;
+    padding: 0;
+    font-size: 1rem;
+  }
+  
+  .carSpecs li {
+    margin-bottom: 8px;
+  }
+  
+  /* 📱 Responsive */
+  @media (max-width: 768px) {
+    .carPageContainer {
+      grid-template-columns: 1fr;
+    }
+  
+    .gallerySection {
+      order: -1;
+    }
+  }
+  

@@ -1,0 +1,72 @@
+/* 🌟 Conteneur principal */
+.aboutContainer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* 📜 Description */
+.description {
+    font-size: 1.2rem;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+/* 🎯 Titres de section */
+.sectionTitle {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-top: 30px;
+    color: #e60000;
+    text-transform: uppercase;
+}
+
+/* 📋 Liste */
+.list {
+    text-align: left;
+    list-style: none;
+    padding-left: 0;
+    margin-top: 15px;
+}
+
+.list li {
+    font-size: 1.1rem;
+    background: #f8f8f8;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+}
+
+.list li::before {
+    content: "✔"; /* Icône de check */
+    font-weight: bold;
+    color: #e60000;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+    .aboutContainer {
+        padding: 30px 15px;
+    }
+
+    .description {
+        font-size: 1rem;
+    }
+
+    .sectionTitle {
+        font-size: 1.6rem;
+    }
+
+    .list li {
+        font-size: 1rem;
+    }
+}

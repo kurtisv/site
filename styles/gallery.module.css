@@ -1,0 +1,401 @@
+/* 🌟 Conteneur principal */
+.galleryContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: #f8faff;
+  padding: 30px;
+  margin: 0 auto;
+  max-width: 1200px;
+  border-radius: 15px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap; /* ✅ Permet de s'adapter sur petits écrans */
+}
+
+/* 📷 Section image + miniatures */
+.sectiongallery {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 55%;
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+  position: relative;
+  max-width: 100%; /* ✅ Empêche le débordement */
+}
+
+/* 📝 Section description */
+.sectiondescription {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 40%;
+  padding: 30px;
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.08);
+  max-width: 100%; /* ✅ Assure une meilleure réactivité */
+}
+
+/* 📸 Image principale */
+.galleryImageContainer {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+  aspect-ratio: 16 / 9; /* ✅ Garde un bon ratio pour éviter les déformations */
+  overflow: hidden;
+  border-radius: 10px;
+  position: relative;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.galleryImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+/* 🚀 Ajout de boutons de navigation */
+.navButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+}
+
+.navButton:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+.navLeft {
+  left: 10px;
+}
+
+.navRight {
+  right: 10px;
+}
+
+/* 🖼️ Miniatures */
+.galleryThumbnails {
+  display: flex;
+  justify-content: center;
+  gap: 1px;
+  margin-top: 15px;
+  height: 100px;
+  overflow-x: auto; /* ✅ Active le scroll horizontal */
+  scrollbar-width: none; /* ✅ Cache la scrollbar sur Firefox */
+  -ms-overflow-style: none; /* ✅ Cache la scrollbar sur IE/Edge */
+  padding-bottom: 10px; /* ✅ Évite que le scroll touche les bords */
+  max-width: 100%;
+}
+
+/* ✅ Cache la scrollbar sur WebKit (Chrome, Safari, Edge) */
+.galleryThumbnails::-webkit-scrollbar {
+  display: none;
+}
+
+/* Miniatures */
+.thumbnail {
+  width: 70px;
+  height: 70px;
+  object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  border: 3px solid transparent;
+  flex-shrink: 0;
+}
+
+.thumbnail:hover {
+  transform: scale(1.1);
+}
+
+.thumbnail.active {
+  border: 3px solid #e60000;
+  opacity: 0.5;
+}
+
+.descripseparator {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+  width: 100%;
+  min-height: 150px;
+  overflow-y: auto;
+  padding: 10px;
+  background: #f9f9f9;
+  border-radius: 10px;
+  word-break: break-word;
+}
+
+/* ✅ Assure que le texte reste dans la div sans la dépasser */
+.imageDescriptiontext {
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+  width: 100%;
+  word-wrap: break-word;
+  white-space: normal;
+}
+.imageDescription{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  width: 45%;
+  justify-content: center;
+  align-items: center;
+  
+
+}
+
+/* 🎯 Détails */
+.detailsseparator {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.detailsseparator span {
+  background: #f4f4f4;
+  padding: 8px 12px;
+  border-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* 📱 Responsive */
+@media (max-width: 1024px) {
+  .galleryContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sectiongallery,
+  .sectiondescription {
+    width: 90%;
+  }
+
+  .galleryImageContainer {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .thumbnail {
+    width: 60px;
+    height: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sectiongallery,
+  .sectiondescription {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .galleryImageContainer {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .thumbnail {
+    width: 50px;
+    height: 50px;
+  }
+
+  .imageDescriptiontext {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .galleryContainer {
+    padding: 20px;
+  }
+
+  .sectiongallery {
+    padding: 10px;
+  }
+
+  .galleryImageContainer {
+    height: auto;
+    aspect-ratio: 4 / 3; /* ✅ Ratio plus adapté aux petits écrans */
+  }
+
+  .thumbnail {
+    width: 40px;
+    height: 40px;
+  }
+
+  .navButton {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+
+  .imageDescriptiontext {
+    font-size: 12px;
+  }
+}
+
+
+/* 🎭 Animation FadeIn */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 🚀 Animation ScaleIn */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* 🌟 Animation d’apparition pour toute la galerie */
+.galleryContainer {
+  animation: fadeIn 1s ease-out;
+}
+
+/* 🎨 Animation pour l’image principale */
+.galleryImageContainer {
+  animation: scaleIn 0.8s ease-out;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Effet Hover sur l’image principale */
+.galleryImageContainer:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* 📷 Animation pour les miniatures */
+.thumbnail {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  animation: fadeIn 0.6s ease-out;
+}
+
+.thumbnail:hover {
+  transform: scale(1.1);
+  opacity: 0.8;
+}
+
+/* 🎯 Effet hover sur les boutons de navigation */
+.navButton {
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.navButton:hover {
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 1);
+}
+
+/* 📝 Animation pour la section description */
+.sectiondescription {
+  animation: fadeIn 1.2s ease-out;
+  transition: transform 0.3s ease;
+}
+
+.sectiondescription:hover {
+  transform: translateY(-5px);
+}
+
+/* 📜 Effet fadeIn pour les détails */
+.detailsseparator span {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  animation: fadeIn 1.3s ease-out;
+}
+
+/* 🌍 Responsive */
+@media (max-width: 768px) {
+  .galleryContainer {
+    padding: 20px;
+  }
+
+  .galleryImageContainer {
+    height: auto;
+    aspect-ratio: 16 / 9;
+  }
+
+  .thumbnail {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media (max-width: 480px) {
+  .thumbnail {
+    width: 40px;
+    height: 40px;
+  }
+
+  .navButton {
+    width: 30px;
+    height: 30px;
+    font-size: 16px;
+  }
+}
+
+
+/* 🎭 Animation de transition fluide */
+@keyframes fadeImage {
+  0% {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* 🌟 Effet appliqué lors du changement d’image */
+.galleryImage {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 0.5s ease-in-out, transform 0.3s ease-in-out;
+}
+
+/* 🎬 Masque progressif de l'ancienne image */
+.fadeOut {
+  opacity: 0;
+  transform: scale(1.05);
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+}

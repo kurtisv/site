@@ -1,0 +1,107 @@
+/* 🌟 Style de base pour tous les boutons */
+.button {
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* 🔥 Bouton Principal (Rouge) */
+.primary {
+  background-color: #e60000;
+  color: white;
+  clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+  transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+.primary:hover {
+  background-color: #cc0000;
+}
+
+/* 🔷 Bouton Secondaire (Gris) */
+.secondary {
+  background-color: #666;
+  color: white;
+}
+.secondary:hover {
+  background-color: #555;
+}
+
+/* ⚡ Bouton Outline (Bordure seulement) */
+.outline {
+  background-color: transparent;
+  border: 2px solid #e60000;
+  color: #e60000;
+}
+.outline:hover {
+  background-color: #e60000;
+  color: white;
+}
+
+/* ❌ Bouton Danger (Rouge foncé) */
+.danger {
+  background-color: #d9534f;
+  color: white;
+}
+.danger:hover {
+  background-color: #c9302c;
+}
+
+/* ✅ Bouton Succès (Vert) */
+.success {
+  background-color: #5cb85c;
+  color: white;
+}
+.success:hover {
+  background-color: #4cae4c;
+}
+
+/* 🔄 Bouton Pleine Largeur */
+.fullWidth {
+  width: 100%;
+}
+
+/* sans bordure */
+.noBorder {
+  border: none;
+  color: #e60000;
+}
+.noBorder:hover {
+  background-color: #e60000;
+  color: white;
+  border: none;
+  clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+  transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+
+}
+
+/* 🔥 Bouton Incliné (Slanted) */
+.slanted {
+  background-color: black;
+  color: white;
+  padding: 14px 30px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+  transition: transform 0.2s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: inline-block;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.slanted:hover {
+  background-color: #222;
+  transform: translateY(-3px);
+  box-shadow: 6px 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+.slanted:active {
+  transform: translateY(1px);
+  box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+}
+

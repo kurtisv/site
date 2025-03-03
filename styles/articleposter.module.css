@@ -1,0 +1,210 @@
+/* 🎭 Animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* 🎨 Style général de l'article */
+.articlePoster {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: fadeInUp 0.8s ease-in-out;
+}
+
+.articlePoster:hover {
+    transform: translateY(-5px);
+    box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* 📌 Contenu */
+.articlePosterContent {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* 📰 Titre */
+.articleTitle {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #e60000;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    animation: scaleIn 1s ease-in-out;
+}
+
+/* 🗓️ Date & Auteur */
+.articleDate, .articleAuthor {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #777;
+    font-size: 14px;
+    justify-content: center;
+    font-weight: 500;
+    animation: fadeInUp 0.8s ease-in-out;
+}
+
+/* 🖼️ Image */
+.articleImage {
+    width: 100%;
+    max-height: 450px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    animation: scaleIn 1s ease-in-out;
+}
+
+.articleImage:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* 📜 Contenu du texte */
+.articleBody {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.8;
+    text-align: justify;
+    animation: slideIn 1s ease-in-out;
+}
+
+/* 📝 Paragraphes */
+.paragraph {
+    margin-bottom: 15px;
+    font-size: 18px;
+    color: #444;
+    line-height: 1.8;
+    padding: 10px;
+    background: #f8f8f8;
+    border-radius: 5px;
+    animation: slideIn 1.2s ease-in-out;
+}
+
+/* 🏆 Titres */
+.heading1 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(90deg, #e60000 0%, #ff4500 100%);
+    border-radius: 8px;
+    padding: 12px;
+    text-align: center;
+    display: inline-block;
+    margin: 20px 0;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.heading2 {
+    font-size: 1.75rem;
+    font-weight: bold;
+    color: #222;
+    border-bottom: 2px solid #e60000;
+    padding-bottom: 5px;
+    margin: 15px 0;
+    animation: fadeInUp 1.2s ease-in-out;
+}
+
+.heading3 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #444;
+    font-style: italic;
+    margin: 10px 0;
+    animation: fadeInUp 1.4s ease-in-out;
+}
+
+/* 📌 Listes */
+.list {
+    padding-left: 25px;
+    margin-bottom: 15px;
+    margin: 25px;
+    animation: slideIn 1.2s ease-in-out;
+}
+
+.listItem {
+    margin-bottom: 8px;
+    font-size: 17px;
+    position: relative;
+    padding-left: 20px;
+    margin: 25px;
+    animation: slideIn 1.4s ease-in-out;
+}
+
+.listItem::before {
+    content: "✔";
+    position: absolute;
+    left: 0;
+    color: #e60000;
+    font-weight: bold;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+    .articlePoster {
+        padding: 20px;
+    }
+
+    .articleTitle {
+        font-size: 2rem;
+    }
+
+    .articleImage {
+        max-height: 350px;
+    }
+
+    .paragraph {
+        font-size: 16px;
+    }
+
+    .heading1 {
+        font-size: 1.8rem;
+    }
+
+    .heading2 {
+        font-size: 1.6rem;
+    }
+
+    .heading3 {
+        font-size: 1.4rem;
+    }
+
+    .listItem {
+        font-size: 16px;
+    }
+}

@@ -1,0 +1,58 @@
+.navbarArticle {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    background-color: #f5f7fa;
+    padding: 12px;
+    border-radius: 12px;
+    width: 780px;
+    margin: auto;
+}
+
+/* 🖥️ Responsive */
+@media (max-width: 768px) {
+    .navbarArticle {
+        width: 100%;
+        padding: 10px;
+    }
+}
+
+/* 🔍 Barre de recherche */
+.searchContainer {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 20px;
+    padding: 5px 12px;
+    border: 1px solid #ddd;
+    flex: 1;
+}
+
+.searchInput {
+    border: none;
+    outline: none;
+    flex: 1;
+    font-size: 14px;
+    padding: 8px;
+    background-color: white;
+    color: #000;
+}
+
+.searchButton {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    color: black;
+}
+
+/* 📌 Sélecteur d'auteur */
+.select {
+    border: none;
+    background: transparent;
+    font-size: 14px;
+    cursor: pointer;
+    padding: 5px;
+    outline: none;
+    color: black;
+}
