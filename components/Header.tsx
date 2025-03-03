@@ -38,7 +38,7 @@ const Header = () => {
           Articles
         </Link>
         <Link href="/about" className={pathname === "/about" ? styles.active : ""}>
-          About
+          A propos
         </Link>
         <Link href="/contact" className={pathname === "/contact" ? styles.active : ""}>
           Contact
