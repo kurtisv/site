@@ -28,7 +28,7 @@ const NavbarCar: React.FC<NavbarCarProps> = ({ setSearch, setBrand, brands }) =>
       <div className={styles.searchContainer}>
         <input
           type="text"
-          placeholder="Search..."
+          placeholder="Rechercher d'un voiture..."
           onChange={(e) => setSearch(e.target.value)}
           className={styles.searchInput}
         />
