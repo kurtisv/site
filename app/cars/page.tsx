@@ -22,7 +22,7 @@ export default function CatalogCarPage() {
   }, []);
 
   // 🔍 Extraire toutes les marques uniques
-  const brands = ["All brands", ...new Set(cars.map((car) => car.brand))];
+  const brands = ["toutes les marques", ...new Set(cars.map((car) => car.brand))];
 
   // 🔍 Filtrage des voitures à chaque changement de search ou brand
   useEffect(() => {
@@ -36,7 +36,7 @@ export default function CatalogCarPage() {
       );
     }
 
-    if (brand !== "All brands") {
+    if (brand !== "toutes les marques") {
       filtered = filtered.filter((car) => car.brand === brand);
     }
 
