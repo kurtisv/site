@@ -10,7 +10,7 @@ export default function CatalogCarPage() {
   const [cars, setCars] = useState<Car[]>([]);
   const [filteredCars, setFilteredCars] = useState<Car[]>([]);
   const [search, setSearch] = useState("");
-  const [brand, setBrand] = useState("All brands");
+  const [brand, setBrand] = useState("toutes les marques");
 
   useEffect(() => {
     const fetchCars = async () => {
