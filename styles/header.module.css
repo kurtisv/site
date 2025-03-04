@@ -1,11 +1,7 @@
-/* 🌟 Style général du header */
+/* Header styles for marketing website */
 .header {
-  background-color: #fff;
-  padding: 15px 30px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  background-color: transparent;
+  padding: 20px 5%;
   position: fixed;
   top: 0;
   left: 0;
@@ -14,7 +10,23 @@
   transition: all 0.3s ease-in-out;
 }
 
-/* 🏎️ Logo et nom du site */
+/* Scrolled state for header */
+.scrolled {
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 15px 5%;
+}
+
+/* Container for header content */
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Logo styling */
 .logo {
   display: flex;
   align-items: center;
@@ -23,118 +35,131 @@
   font-weight: bold;
   color: #e60000;
   transition: transform 0.3s ease-in-out;
+  z-index: 1001;
 }
 
 .logo:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
-.siteName {
-  font-size: 20px;
-  font-weight: bold;
-  color: #333;
-}
-
-/* 📌 Barre de navigation */
+/* Navigation */
 .nav {
   display: flex;
-  gap: 20px;
+  gap: 30px;
   align-items: center;
-  justify-content: center;
-  width: 100%;
 }
 
-/* 📎 Liens de navigation */
+/* Navigation links */
 .nav a {
   text-decoration: none;
-  color: #333;
-  font-size: 18px;
+  color: rgb(0, 0, 0);
+  font-size: 16px;
   font-weight: 600;
-  padding: 12px 18px;
-  border-radius: 8px;
-  transition: all 0.3s ease-in-out;
+  padding: 8px 0;
   position: relative;
+  transition: all 0.3s ease;
 }
 
-/* 🎨 Effet hover */
-.nav a:hover {
-  background-color: rgba(230, 0, 0, 0.1);
-  transform: translateY(-2px);
+/* Change nav link color when header is scrolled */
+.scrolled .nav a {
+  color: #333;
 }
 
-/* 🔥 Effet souligné dynamique */
+/* Underline effect for nav links */
 .nav a::after {
   content: "";
-  width: 0%;
-  height: 3px;
-  background: #e60000;
   position: absolute;
-  bottom: -3px;
-  left: 50%;
-  transform: translateX(-50%);
-  transition: width 0.3s ease-in-out;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #e60000;
+  transition: width 0.3s ease;
 }
 
-.nav a:hover::after {
+.nav a:hover::after,
+.nav a.active::after {
   width: 100%;
 }
 
-/* 🎯 Page active */
-.nav .active {
-  background-color: #e60000;
-  color: white;
-  border-radius: 8px;
-  padding: 12px 18px;
+/* Active link styling */
+.nav a.active {
+  color: #e60000;
 }
 
-/* 📱 Menu Burger */
+/* CTA button container */
+.headerCta {
+  margin-left: 20px;
+}
+
+/* Mobile menu button */
 .burgerMenu {
   display: none;
-  /* Caché sur desktop */
   background: none;
   border: none;
   font-size: 28px;
   cursor: pointer;
+  color: white;
   transition: transform 0.2s ease-in-out;
+  z-index: 1001;
+}
+
+.scrolled .burgerMenu {
+  color: #333;
 }
 
 .burgerMenu:hover {
   transform: scale(1.1);
 }
 
-/* 📱 Responsive : Affichage du menu mobile sans cacher les autres sections */
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .nav {
+    gap: 20px;
+  }
+  
+  .nav a {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 900px) {
+  .headerCta {
+    display: none;
+  }
+}
+
 @media (max-width: 768px) {
   .burgerMenu {
     display: block;
-    color: #000;
   }
-
-  .headerContent {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-  }
-
+  
   .nav {
-    display: none;
-    /* Caché par défaut */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
     flex-direction: column;
-    position: absolute;
-    top: 100px;
-    left: 50%;
-    transform: translateX(-50%);
-    background: white;
-    width: 90%;
-    padding: 15px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    text-align: center;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .navOpen {
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
     display: flex;
-    /* Affiche le menu sans cacher les autres divs */
+  }
+  
+  .navOpen {
+    transform: translateX(0);
+  }
+  
+  .nav a {
+    color: #333;
+    font-size: 20px;
+  }
+  
+  .headerContainer {
+    justify-content: space-between;
   }
 }

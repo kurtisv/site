@@ -3,8 +3,8 @@ import { ReactNode } from "react";
 
 interface TextProps {
   children: ReactNode;
-  as?: "p" | "h1" | "h2" | "h3" | "span"; // 🔥 Gérer plusieurs éléments HTML
-  variant?: "default" | "title" | "subtitle" |"subtitle2"| "highlight" | "muted" | "title2"; // 🎨 Plusieurs styles possibles
+  as?: "p" | "h1" | "h2" | "h3" | "h4" | "h5" | "h6" | "span"; // 🔥 Gérer plusieurs éléments HTML
+  variant?: "default" | "title" | "title2" | "title3" | "subtitle" | "subtitle2" | "highlight" | "muted"; // 🎨 Plusieurs styles possibles
   className?: string; // Permet d'ajouter des classes supplémentaires
 }
 

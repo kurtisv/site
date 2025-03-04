@@ -3,38 +3,66 @@
     font-family: Arial, sans-serif;
     color: #333;
     line-height: 1.5;
+    margin: 0;
 }
+
+/* 
+ * Typographic scale starting with h1 at 3rem
+ * Base size: 1rem (16px)
+ * h1: 3rem
+ * h2: 2.5rem
+ * h3: 2rem
+ * h4: 1.75rem
+ * h5: 1.5rem
+ * h6: 1.25rem
+ */
 
 /* 🏆 Variantes de styles */
 .title {
-    font-size: 115px;
+    font-size: 3rem; /* h1 size */
     font-weight: bold;
     color: #e60000;
     /* Rouge */
     text-transform: uppercase;
     animation: fadeInDown 1.5s ease-out;
+    line-height: 1.2;
+    margin-bottom: 0.5em;
 }
 
 .title2 {
-    font-size: 115px;
+    font-size: 2.5rem; /* h2 size */
     font-weight: bold;
     color: #555;
     text-transform: uppercase;
     animation: fadeInDown 1.5s ease-out;
+    line-height: 1.25;
+    margin-bottom: 0.5em;
+}
+
+.title3 {
+    font-size: 2rem; /* h3 size */
+    font-weight: bold;
+    color: #555;
+    line-height: 1.3;
+    margin-bottom: 0.5em;
 }
 
 .subtitle {
-    font-size: 2rem;
+    font-size: 1.75rem; /* h4 size */
     font-weight: bold;
     color: #555;
     animation: fadeInDown 1.5s ease-out 0.5s;
     animation-fill-mode: both;
+    line-height: 1.35;
+    margin-bottom: 0.5em;
 }
 
 .subtitle2 {
-    font-size: 1.5rem;
+    font-size: 1.5rem; /* h5 size */
     font-weight: bold;
     color: #555;
+    line-height: 1.4;
+    margin-bottom: 0.5em;
 }
 
 .highlight {
@@ -45,6 +73,13 @@
 .muted {
     color: #999;
     font-size: 0.9rem;
+}
+
+/* Default paragraph style */
+.default {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1em;
 }
 
 /* 🎭 Animation */
@@ -63,14 +98,45 @@
 /* 📱 Responsive */
 @media (max-width: 768px) {
     .title {
-        font-size: 3rem;
+        font-size: 2.5rem; /* One step down on mobile */
     }
 
     .title2 {
-        font-size: 2.5rem;
+        font-size: 2rem; /* One step down on mobile */
+    }
+    
+    .title3 {
+        font-size: 1.75rem; /* One step down on mobile */
     }
 
     .subtitle {
-        font-size: 1.5rem;
+        font-size: 1.5rem; /* One step down on mobile */
+    }
+    
+    .subtitle2 {
+        font-size: 1.25rem; /* One step down on mobile */
+    }
+}
+
+/* Additional responsive adjustments for smaller screens */
+@media (max-width: 480px) {
+    .title {
+        font-size: 2.25rem; /* Smaller on small mobile */
+    }
+
+    .title2 {
+        font-size: 1.75rem; /* Smaller on small mobile */
+    }
+    
+    .title3 {
+        font-size: 1.5rem; /* Smaller on small mobile */
+    }
+
+    .subtitle {
+        font-size: 1.25rem; /* Smaller on small mobile */
+    }
+    
+    .subtitle2 {
+        font-size: 1.1rem; /* Slightly larger than base */
     }
 }
