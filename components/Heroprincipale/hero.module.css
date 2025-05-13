@@ -1,0 +1,110 @@
+/* ===== CONTENEUR PLEIN-ÉCRAN ===== */
+.heroSplit {
+  position: relative;
+  width: 100%;
+  height: 100vh;                     /* plein écran */
+  display: grid;
+  grid-template-columns: 55% 45%;    /* image / panneau */
+  overflow: hidden;
+}
+
+/* ===== COLONNE IMAGE ===== */
+.heroImg {
+  background: url("/images/hero-car.jpg") center/cover no-repeat;
+  filter: brightness(0.85);          /* fonce l’image pour la lisibilité du texte */
+}
+
+/* ===== COLONNE PANNEAU ROUGE ===== */
+.heroContent {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 clamp(2rem, 5vw, 4rem);
+  color: #fff;
+  /* dégradé rouge profond */
+  background: linear-gradient(135deg, #d60000 0%, #9b0000 100%);
+}
+
+/* bord oblique */
+.heroContent::before {
+  content: "";
+  position: absolute;
+  left: -11vw;          /* profondeur de la coupe */
+  top: 0;
+  width: 22vw;
+  height: 100%;
+  background: inherit;
+  transform: skewX(-12deg);
+}
+
+/* ===== TITRES ===== */
+.titleMain {
+  font-size: clamp(3rem, 8vw, 6rem);
+  font-weight: 800;
+  line-height: 1;
+  text-transform: uppercase;
+  position: relative ;
+}
+.titleSub {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.8);
+  margin-top: 0.4em;
+  text-transform: uppercase;
+  position: relative;
+}
+
+/* ===== PARAGRAPHE ===== */
+.subtitle {
+  margin-top: 2rem;
+  font-size: clamp(1rem, 1.3vw, 1.1rem);
+  line-height: 1.6;
+  max-width: 42ch;
+  color: rgba(255, 255, 255, 0.85);
+  position: relative;
+}
+
+/* ===== BOUTONS CTAs ===== */
+.buttonContainer {
+  margin-top: 3rem;
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.cta {
+  display: inline-block;
+  padding: 1.2rem 2.8rem;
+  background: #000;
+  color: #fff;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-decoration: none;
+  transform: skewX(-6deg);          /* biseau */
+  transition: background 0.25s;
+  border-radius: 6px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+}
+.cta:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 860px) {
+  .heroSplit {
+    grid-template-columns: 1fr;
+    height: auto;
+  }
+  .heroImg {
+    height: 60vh;
+  }
+  .heroContent::before {
+    display: none;
+  }
+
+  .buttonContainer {
+    margin: 3rem;
+  }
+}

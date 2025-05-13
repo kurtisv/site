@@ -4,7 +4,7 @@ import { ReactNode } from "react";
 interface TextProps {
   children: ReactNode;
   as?: "p" | "h1" | "h2" | "h3" | "span"; // 🔥 Gérer plusieurs éléments HTML
-  variant?: "default" | "title" | "subtitle" |"subtitle2"| "highlight" | "muted" | "title2"; // 🎨 Plusieurs styles possibles
+  variant?: "default" | "title" | "subtitle" |"subtitle2"| "highlight" | "muted" | "title2" | "title3" | "title4"; // 🎨 Plusieurs styles possibles
   className?: string; // Permet d'ajouter des classes supplémentaires
 }
 

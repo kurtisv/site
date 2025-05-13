@@ -1,15 +1,18 @@
 import { ReactNode } from "react";
+import Header from "../components/Header";
+import Footer from "../components/Footer/Footer";
 
-interface SubCarLayoutProps {
+interface principaleLayoutProps {
   children: ReactNode;
 }
 
-const SubCarLayout = ({ children }: SubCarLayoutProps) => {
+const principaleLayout = ({ children }: principaleLayoutProps) => {
   return (
     <div>
+      <Header />
       <main>{children}</main>
     </div>
   );
 };
 
-export default SubCarLayout;
+export default principaleLayout;

@@ -101,5 +101,11 @@ export const categoryType = defineType({
         title: 'Auteur',
         type: 'string',
       }),
+      defineField({
+        name: 'approved',
+        title: 'Approuvé',
+        type: 'boolean',
+        initialValue: false,
+      }),
   ],
 })

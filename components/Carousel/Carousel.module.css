@@ -1,0 +1,14 @@
+/* Exemple CSS global ou module */
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;          /* plein écran */
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  transition: transform 0.8s ease-in-out;   /* animation fluide */
+}

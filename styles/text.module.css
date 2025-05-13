@@ -13,6 +13,25 @@
     /* Rouge */
     text-transform: uppercase;
     animation: fadeInDown 1.5s ease-out;
+    position: relative;
+}
+
+.title3 {
+    font-size: 5rem;
+    font-weight: bold;
+    color: #fbf5f5;
+    text-transform: uppercase;
+    animation: fadeInDown 1.5s ease-out;
+    position: relative;
+}
+
+.title4 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #555;
+    text-transform: uppercase;
+    animation: fadeInDown 1.5s ease-out;
+    position: relative;
 }
 
 .title2 {
@@ -21,20 +40,23 @@
     color: #555;
     text-transform: uppercase;
     animation: fadeInDown 1.5s ease-out;
+    position: relative;
 }
 
 .subtitle {
-    font-size: 2rem;
+    font-size: 1rem;
     font-weight: bold;
     color: #555;
     animation: fadeInDown 1.5s ease-out 0.5s;
     animation-fill-mode: both;
+    position: relative;
 }
 
 .subtitle2 {
     font-size: 1.5rem;
     font-weight: bold;
     color: #555;
+    position: relative;
 }
 
 .highlight {
